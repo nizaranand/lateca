@@ -1,0 +1,26 @@
+#slidearea{background:url(i/dot.png); height:308px; margin-left:10px; margin-right:10px; overflow:hidden; position:relative; margin-bottom:20px; padding:10px; background-color:#262626; box-shadow:0 0 3px #121212; -moz-box-shadow:0 0 3px #121212; -webkit-box-shadow:0 0 3px #121212}
+
+#gallerycover{width:382px; height:245px; overflow:hidden; position:absolute; top:35px; right:40px}
+
+div.mygallery ul li img{margin:0px; padding:0px; border:0px; outline:0px; height:244px; width:380px; -webkit-border-radius:8px; -moz-border-radius:8px; background-color:#262626; border:1px solid #292929}
+#textcover{width:490px; height:200px; overflow:hidden; position:absolute; top:65px; left:20px}
+
+.mytext{position:relative; margin-bottom:10px; margin-left:10px; height:200px; width:470px; float:left; line-height:20px; color:#c4c4c4; font-family:Georgia,century gothic,Verdana,sans-serif}
+.mytext ul li{height:200px; padding-left:5px}
+.mytext ul li p{ font-family:Georgia,serif; margin-right:50px; text-align:justify; font-size:12px; font-style:italic; padding-right:60px; text-align:justify}
+.mytext a:link, .mytext a:visited{color:#EFF1E1 !important; text-shadow: 0px 1px 1px #111;}
+.mytext h2{font-family:Palatino,Georgia,"Times New Roman",sans-serif; font-size:24px; font-weight:normal; font-style:italic; font-variant:normal; margin-bottom:10px; text-decoration:none; text-align:start; text-indent:0px; text-shadow: 0px 1px 1px #111;}
+.mytext h2 a:link, .mytext h2 a:visited{color:#fff}
+
+a.next img, a.prev img{opacity:.4; background:black}
+ a img:hover{ opacity:1}
+
+.prev{position:absolute; bottom:50px; left:40px}
+.next{position:absolute; bottom:50px; left:60px}
+
+ div.imageSub{position:relative}
+ div.imageSub img{z-index:1; -moz-border-radius:8px;}
+ div.imageSub div{ position:absolute;   width:200px;  top:5%;  right:0;  padding:4px;  height:30px;  line-height:16px;  text-align:center;  overflow:hidden}
+ div.imageSub div.blackbg{ z-index:2;  background-color:#000;  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";  filter:alpha(opacity=50);  opacity:0.7}
+ div.imageSub div.label{ z-index:3;  color:white;  margin-top:8px}
+

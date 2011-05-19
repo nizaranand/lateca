@@ -1,0 +1,13 @@
+/*
+Theme Name: The Standard
+Theme URI: http://www.siiimple.com/the-standard
+Description: The spoon doesn't bend for me.
+Version: 2.9.2
+Author: Justin Marcus
+Author URI: http://www.justinmarcusdesign.com
+Tags: three-columns, fixed-width, theme-options
+*/
+
+@import "style/css/reset.css";
+@import "style/css/typography.css";
+@import "style/css/layout.css";

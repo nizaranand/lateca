@@ -1,0 +1,54 @@
+div#top.clear {  height: 50px; }
+
+div#blog-front.g320{margin-left:0;}
+div#others.g320{margin-left:0;}
+
+ul.xoxo.blogroll li {display: inline}
+
+div.bookmarks-gallery li {display: inline}
+div.bookmarks-gallery { margin:0 auto; display:inline; }
+div.bookmarks-gallery img { float:left; width:80px; background:#fff; border:1px solid #e2e2e2; }
+
+div#nav.g480 ul.sf-menu { font-family: Georgia; margin-top:25px; margin-left:0px; margin-right:0; }
+
+
+h2.heading,h2.heading a { font-family:Palatino,Georgia,"Times New Roman",sans-serif; font-size:20px; font-weight:normal; font-style:italic; font-variant:normal; margin-bottom:10px; margin-top:10px; text-transform:lowercase; text-decoration:none; text-align:start; text-indent:0; color: #222;text-shadow: 0px 1px 1px #ccc; }
+
+/*Our Team*/
+div#others.g320 p { font-family: Georgia, serif; font-size: 11px; }
+div#others.g320 ul li { float:left; padding:0; margin:0 }
+
+.sf-menu li { background:#222; }
+.sf-menu li li { background:#000; }
+.sf-menu li li li { background:#222; }
+.sf-menu li:hover,.sf-menu li.sfHover,.sf-menu a:focus,.sf-menu a:hover,.sf-menu a:active { background:black; border:none; outline:0; z-index: 100 }
+
+div.g480 p.twitter { background-image:url(i/twitter_fly.gif); background-repeat:no-repeat;
+background-position:left;  font-family:Palatino,Georgia,"Times New Roman",sans-serif; font-size:16px; color:#222; font-weight:normal; font-style:italic; }
+div.g480 p.twitter a { color:#56bcff; }
+
+
+div#archive.g240 ul li { font-family: Georgia, serif; list-style: square; padding-top:0; margin:0; margin-left:20px; padding-left:0px; color:#444; }
+
+div#archive.g240 ul li a { font-family: Georgia, serif;0 padding:0; font-size:11px; font-style:italic;  color:#EFF1E1; font-size:11px; font-style:italic; }
+
+/*CONTACT FORM PAGE*/
+.screenReader { margin:0; padding:0; float: left; }
+.thanks { background:#F2F3F6; border:1px solid #7E8AA2; }
+ol.forms {list-style:none; margin:0; padding: 0; margin-top: 20px;}
+ol.forms li {  margin-bottom:18px; }
+ol.forms label { cursor:pointer; font-weight:bold; width:100px; }
+ol.forms input,ol.forms textarea { border:1px solid #7E8AA2; border-radius:3px; font:inherit; -moz-border-radius:3px; padding:2px; -webkit-border-radius:3px;  }
+ol.forms textarea { height:300px; width:234px; }
+ol.forms input:focus,ol.forms textarea:focus { background-color:#f2f3f6; border-color:#ff9800; }
+.error { color:#f00; }
+ol.forms li .error { font-size:12px; margin-left:20px; }
+ol.forms li.textarea .error { display:block; position:absolute; right:0; top:0; width:100px; }
+ol.forms li.screenReader { margin-bottom:0; }
+ol.forms li.buttons button { background:#ff9800; border:none; color:#000; cursor:pointer; font:16px/16px "Avenir LT Std", Helvetica, Arial, sans-serif; padding:6px 3px 3px; text-transform:uppercase; }
+ol.forms li.buttons button:hover { color:#222; }
+ol.forms li.buttons button:active { }
+ol.forms li.buttons,ol.forms li.inline { margin:0; padding:0; float:left; }
+ol.forms li.inline input {margin:0; padding:0; float: left; }
+ol.forms li.inline label {margin:0; padding:0; float: left; }
+ol.forms li.buttons{margin-top: 10px;}

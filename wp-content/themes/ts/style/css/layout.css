@@ -1,0 +1,170 @@
+/* @override http://s51370.gridserver.com/_1212/wp-content/themes/1212/style/css/layout.css */
+
+html, body, div{border:0; margin:0; padding:0}
+.main{width:960px; padding-top:10px; margin:0 auto}
+.g160, .g320, .g480, .g600, .g640, .g800, .g960, .g80, .g240, .g400, .g560, .g720, .g880, .g960{float:left; display:inline; margin-left:10px}
+.g160{width:150px}
+.g320{width:310px}
+.g480{width:470px}
+.g600{ width:590px}
+.g640{width:630px}
+.g800{width:790px}
+.g960{width:950px}
+.g80{width:70px}
+.g240{width:230px}
+.g400{width:390px}
+.g560{width:550px}
+.g720{width:710px}
+.g880{width:870px}
+.inside{margin-left:0}
+p.grid{padding-left:10px}
+.clear{clear:both; height:10px}
+.clearfix:after, .main:after{visibility:hidden; display:block; font-size:0; content:""; clear:both; height:0}
+.clearfix, .main{display:block}
+div#top.clear{ height:60px}
+
+/*LAYOUT*/
+body{background:url(i/bg.png) top repeat-x; font-family:Georgia,serif}
+body.other{background:url(i/template-bg.png) top repeat-x}
+div.wrapper{background:url(i/bottom.png) bottom repeat-x}
+body.other div.wrapper{background:none}
+#wrapper{width:100%}
+#header.g960{margin-left:10px}
+div#divider.clear{background:url(i/line.png); height:1px; clear:both}
+div#header.g480 h1{ padding:0; margin:0; margin-top:15px}
+div#header.g480 h1 a{font-family:Georgia,serif; text-align:justify; font-size:28px; color:#EFF1E1; text-shadow:0px 1px 1px #111; font-weight:100; font-style:italic}
+div#header.g480 p{font-size:11px; font-style:italic; padding-bottom:0; color:#EFF1E1; text-shadow:0px 1px 1px #111}
+div#welcome.g320 ul li{background:url(i/star_icon.gif) left no-repeat; padding-left:20px; color:#999; font-style:italic; margin-bottom:5px; font-family:Georgia,serif; margin-right:50px; text-align:justify; font-size:11px; font-style:italic}
+div#welcome.g320 p{font-family:Georgia,serif; margin-right:50px; text-align:justify; font-size:11px; font-style:italic}
+div.g480 p.twitter{background:url(i/twitter_fly.png)left no-repeat; height:50px; padding-left:55px; margin-bottom:45px; font-family:Palatino,Georgia,"Times New Roman",sans-serif; font-size:16px; color:#222; font-weight:normal; font-style:italic; text-shadow:0px 1px 1px #ccc}
+div.g480 p.twitter a{color:#56bcff}
+div#info.g240 p{font-family:Georgia,serif; margin-right:10px; text-align:justify; font-size:11px; font-style:italic; margin-bottom:10px; text-align:justify;  font-style:italic}
+div#info.g240{padding-left:30px}
+div#info.g240 ul li{display:inline; margin-right:10px}
+div#inspiration.g320{padding-left:30px; padding-right:9px; margin-bottom:50px; margin-left:40px; border-left:1px solid #333; border-right:1px solid #333}
+h2.heading, h2.heading a{font-family:Palatino,Georgia,"Times New Roman",sans-serif; font-size:24px; font-weight:normal; font-style:italic; font-variant:normal; margin-bottom:10px; text-transform:lowercase; text-decoration:none; text-align:start; text-indent:0; color:#222; text-shadow:0px 1px 1px #ccc}
+h2.heading-footer{color:#999; font-family:Palatino,Georgia,"Times New Roman",sans-serif; font-size:24px; font-weight:normal; font-style:italic; font-variant:normal; margin-bottom:15px; text-transform:lowercase; text-decoration:none; text-align:start; text-indent:0}
+div.g320 ul li p{margin-bottom:20px; font-size:11px; font-style:italic; text-align:justify}
+div.g320 ul li img{border:1px solid #222}
+textarea#comment{ width:500px}
+
+/*Our Team*/
+div#others.g320 p{font-family:Georgia,serif; padding-right:10px; font-size:11px}
+div#others.g320 ul li img{float:left; margin-right:15px}
+
+/*Blog - Front Page*/
+h1.title{font-family:Georgia,serif; margin-right:50px; text-align:justify; font-size:12px; font-style:italic}
+h1.title a:hover{text-decoration:none}
+h1.title a{color:#222; color:rgb(34,34,34); background-color:transparent; border-bottom:1px dotted #999; padding-bottom:1px}
+div#blog-front.g320 p{font-family:Georgia,serif; padding-right:40px; margin-bottom:20px; margin-top:10px; text-align:justify; font-size:11px; font-style:italic}
+h3.read-more{font-family:Palatino,tahoma,verdana,arial,sans-serif; font-size:13px; background:url(i/star_icon.png) left no-repeat; padding-left:20px}
+h3.read-more a{color:#999; border-bottom:1px dotted #999; padding-bottom:2px}
+
+/*Portfolio - Front Page*/
+h3.title{color:#999; font-size:11px; font-style:italic; text-align:justify}
+div#latest-work.g320 ul.latest div.postthumb{margin-bottom:30px}
+div#latest-work.g320 ul.latest div.postthumb a img{border:1px solid #ccc; padding:3px}
+
+/*Navigation*/
+div#nav.g480 ul.sf-menu{font-family:Georgia; margin-top:25px; margin-left:96px; margin-right:0}
+div#nav.g480 ul.sf-menu li{border-right:1px solid #333; display:inline; margin-right:0; padding-left:0; padding-right:10px}
+div#nav.g480 ul.sf-menu li a{font-family:Georgia; color:#EFF1E1; font-size:11px; font-style:italic}
+div#nav.g480 ul.sf-menu li a:hover{text-decoration:none; color:#fafafa}
+div#nav.g480 ul.sf-menu li:hover{color:#fff}
+.sf-menu, .sf-menu *{margin:0; padding:0; list-style:none}
+.sf-menu{line-height:1.0}
+.sf-menu ul{position:absolute; top:-999em; width:10em; /* left offset of submenus need to match (see below) */}
+.sf-menu ul li{width:100%; font-size:11px}
+.sf-menu li:hover{visibility:inherit; /* fixes IE7 'sticky bug' */}
+.sf-menu li{float:left; position:relative; font-size:11px}
+.sf-menu a{display:block; position:relative}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul{left:0; top:2.5em; /* match top ul list item height */z-index:99}
+ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul{top:-999em}
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul{left:10em; /* match ul width */top:0}
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul{top:-999em}
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul{left:10em; /* match ul width */top:0}
+.sf-menu{float:left; margin-bottom:1em}
+.sf-menu a{padding:.75em 1em; text-decoration:none}
+.sf-menu a, .sf-menu a:visited{/* visited pseudo selector so IE6 applies text colour*/color:#13a}
+.sf-menu li{background:#222}
+.sf-menu li li{background:#000}
+.sf-menu li li li{background:#222}
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active{background:black; border:none; outline:0}
+
+/*** arrows **/
+.sf-menu a.sf-with-ul{padding-right:2.25em; min-width:1px; /* trigger IE7 hasLayout so spans position accurately */}
+.sf-sub-indicator{position:absolute; display:block; right:.75em; top:1.05em; /* IE6 only */width:10px; height:10px; text-indent:-999em; overflow:hidden; background:url(i/arrows-ffffff.png) no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */}
+a >.sf-sub-indicator{/* give all except IE6 the correct values */top:.8em; background-position:0 -100px; /* use translucent arrow for modern browsers*/}
+
+/* apply hovers to modern browsers */
+a:focus >.sf-sub-indicator, a:hover >.sf-sub-indicator, a:active >.sf-sub-indicator, li:hover >a >.sf-sub-indicator, li.sfHover >a >.sf-sub-indicator{background-position:-10px -100px; /* arrow hovers for modern browsers*/}
+
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator{background-position:-10px 0}
+.sf-menu ul a >.sf-sub-indicator{background-position:0 0}
+
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus >.sf-sub-indicator, .sf-menu ul a:hover >.sf-sub-indicator, .sf-menu ul a:active >.sf-sub-indicator, .sf-menu ul li:hover >a >.sf-sub-indicator, .sf-menu ul li.sfHover >a >.sf-sub-indicator{background-position:-10px 0; /* arrow hovers for modern browsers*/}
+
+/*** shadows for all but IE6 ***/
+.sf-shadow ul{background:url(i/shadow.png) no-repeat bottom right; padding:0 8px 9px 0; -moz-border-radius-bottomleft:17px; -moz-border-radius-topright:17px; -webkit-border-top-right-radius:17px; -webkit-border-bottom-left-radius:17px}
+.sf-shadow ul.sf-shadow-off{background:transparent}
+
+/*CONTACT FORM PAGE*/
+.screenReader{left:-9999px; position:absolute; top:-9999px}
+.thanks{background:#F2F3F6; border:1px solid #7E8AA2; padding:10px}
+ol.forms{float:left; list-style:none; margin:0; width:100%; padding-left:10px}
+ol.forms li{clear:both; float:left; margin-bottom:18px; position:relative; width:100%}
+ol.forms label{cursor:pointer; display:block; float:left; font-weight:bold; padding-right:20px; width:100px}
+ol.forms input, ol.forms textarea{border:1px solid #7E8AA2; border-radius:3px; font:inherit; -moz-border-radius:3px; padding:2px; -webkit-border-radius:3px; width:214px}
+ol.forms textarea{height:300px; width:334px}
+ol.forms input:focus, ol.forms textarea:focus{background-color:#f2f3f6; border-color:#ff9800}
+.error{color:#f00}
+ol.forms li .error{font-size:12px; margin-left:20px}
+ol.forms li.textarea .error{display:block; position:absolute; right:0; top:0; width:100px}
+ol.forms li.screenReader{margin-bottom:0}
+ol.forms li.buttons button{background:#ff9800; border:none; color:#000; cursor:pointer; font:16px/16px "Avenir LT Std",Helvetica,Arial,sans-serif; overflow:hidden; padding:6px 3px 3px; text-transform:uppercase; width:auto}
+ol.forms li.buttons button:hover{color:#222}
+ol.forms li.buttons button:active{left:-1px; position:relative; top:-1px}
+ol.forms li.buttons, ol.forms li.inline{float:right; width:460px}
+ol.forms li.inline input{width:auto}
+ol.forms li.inline label{display:inline; float:none; width:auto}
+div#portfolio.g320{display:inline}
+.breadcrumbs{height:30px; line-height:30px; width:100%; overflow:hidden; margin:0; padding:0}
+ul.breadcrumbs{list-style:none; margin-bottom:20px; font-size:12px; margin-top:9px}
+ul.breadcrumbs li{list-style-type:none; float:left; padding-left:10px}
+ul.breadcrumbs li a{height:30px; display:block; font-size:12px; font-weight:bold; background-image:url(i/crumbs.gif); background-repeat:no-repeat; background-position:right; padding-right:15px; border-bottom:1px dotted yellow; color:#222}
+.bookmarks-gallery{margin:0 auto; display:inline}
+.bookmarks-gallery img{float:left; width:80px; height:80px; margin:0 10px 15px 0; padding:4px; background:#fff; border:1px solid #e2e2e2}
+div#archive.g240 ul li a{font-family:Georgia,serif; margin-right:50px; text-align:justify; font-size:11px; font-style:italic;  color:#EFF1E1; font-size:11px; font-style:italic}
+div#archive.g240 ul li{font-family:Georgia,serif; background:url(i/double-right.gif)left no-repeat; padding-left:20px}
+
+/*BLOG*/
+div#blog.g320{padding-left:35px; margin-bottom:20px; text-align:justify; font-size:11px; font-style:italic; margin-left:0; margin-top:40px; border-left:1px dotted #ccc}
+div#blog.g320 ul{margin:0; padding:0}
+div#blog.g320 ul li{ font-family:Georgia,serif}
+div#blog.g320 ul li a{color:#999}
+div#blog.g320  h2{ margin-bottom:5px; margin-top:15px}
+div#blog.g320 img{margin-bottom:20px; float:left; width:80px; height:80px; margin:0 10px 15px 0; padding:4px; background:#fff; border:1px solid #e2e2e2}
+div#blog.g600 h3{ margin-top:0px; font-family:Palatino,Georgia,"Times New Roman",sans-serif; font-size:24px; font-weight:normal; font-style:italic}
+div#blog.g600 h3 a{ color:red; font-size:20px}
+div#blog.g600{ padding-right:0px; margin-top:20px}
+div#blog.g600 p{text-align:justify; color:#555; padding-right:0; margin-bottom:10px; text-align:justify; font-size:12px; font-style:italic; margin-left:0;  padding-right:83px;  padding-bottom:0}
+div#blog.g600 h2, div#blog.g600 h1{  font-family:Palatino,Georgia,"Times New Roman",sans-serif; font-size:24px; font-weight:normal; font-style:italic; padding-top:10px; font-variant:normal; margin-bottom:10px; text-transform:lowercase; text-decoration:none; text-align:start; text-indent:0; color:#222; text-shadow:0px 1px 1px #ccc}
+div#blog.g600 h2.heading{margin-bottom:10px; margin-top:20px}
+div#blog.g600 h2.heading a{color:#222!important; text-transform:none}
+div#blog.g600 img{margin-right:20px; margin-top:10px; margin-bottom:20px; padding:4px; background:#fff; border:1px solid #e2e2e2}
+div#blog.g600 ul#archive-list li{background:url(i/star_icon.gif) left no-repeat; padding-left:20px; color:#999; font-style:italic; margin-bottom:10px; font-family:Georgia,serif; margin-right:50px; text-align:justify; font-size:11px; font-style:italic}
+div#blog.g600 ul#archive-list li a{ color:red; border-bottom:1px dotted red}
+span.meta{font-family:Georgia,serif; margin-right:5px; text-align:justify; font-size:11px; font-style:italic;  color:#ccc; font-style:italic}
+div.more-link{ margin-bottom:60px; margin-top:20px}
+div.more-link a{color:#ccc;  font-size:11px; padding:5px; background:#222; -moz-border-radius:5px; -webkit-border-radius:5px}
+input{ border:1px solid #777;  padding:2px}
+input#s{ border:1px solid #ccc; padding:5px}
+input#searchsubmit{ border:1px solid #ccc; padding:5px; background:#fff}
+input#submit{ background:none}
+ol.forms{ margin-top:20px}
+label{font-family:Georgia,serif; margin-right:0px; text-align:justify; font-size:11px; font-style:italic;  padding-right:0 !important; }
+li.inline label{ margin-left:10px}
+
+button{background:none !important; font-size:12px !important; width:50px !important; border:1px solid #222 !important}
