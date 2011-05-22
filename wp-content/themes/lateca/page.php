@@ -1,17 +1,14 @@
 <?php get_header(); ?>
+<div class="grid_12 alpha" id="breadcrumbs">
+<?php if(function_exists('bcn_display')) bcn_display(); ?>
+</div>
 <div class="grid_9 alpha" id="content">
     <div class="content">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <?php if ( is_front_page() ) { ?>
-        
-        // frontpage
-        
-    <?php } else { ?>
     <h1 class="entry-title"><?php the_title(); ?></h1>
     <div class="entry-content">
         <?php the_content(); ?>
     </div>
-    <?php } ?>
     <?php endwhile; // end of the loop. ?>
     </div>
 </div>
