@@ -74,13 +74,13 @@ function create_portfolio() {
         'capability_type' => 'post',
         'hierarchical' => false,
         'rewrite' => true,
-        'supports' => array('title', 'editor', 'thumbnail')
+        'supports' => array('title', 'editor', 'thumbnail', 'comments', 'post-formats')
     );
     register_post_type('portfolio', $portfolio_args);
 }
 
 function add_portfolio(){
-    add_meta_box("portfolio_details", "Portfolio Options", "portfolio_options", "portfolio", "normal", "low");
+    add_meta_box("portfolio_details", "Portfolio Options", "portfolio_options", "portfolio", "normal", "low", "custom-post-templates");
 }
 
 function portfolio_options(){
@@ -120,6 +120,18 @@ function portfolio_edit_columns($portfolio_columns){
     return $portfolio_columns;
 }
 
+
+// My functions
+function get_summary($content, $block = 0) {
+    if ( preg_match('/<!--more(.*?)?-->/', $content, $matches) ) {
+        $array = explode($matches[0], $content);
+        $content = $array[0];
+        if ($block == 1 AND isset($array[1])) {
+            $content .= $array[1];
+        }
+    }
+    return $content;
+}
 
 
 ?>

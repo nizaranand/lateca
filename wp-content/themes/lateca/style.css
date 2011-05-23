@@ -44,11 +44,68 @@ img {border:none;}
 #breadcrumbs span {padding:0 5px;}
 
 #content {margin-top:10px;margin-bottom:20px;}
+#content h1 {margin:0 0 20px;font-size:19px;font-style:italic;font-weight:normal;color:#808080;}
 #content .content {padding-right:20px;}
+
 #content .entry-title {
     margin:0 0 5px;padding:0 0 5px;font-size:32px;font-style:italic;font-weight:normal;color:#808080;}
 #content .entry-content {line-height:18px;}
 #content .entry-content p {padding:0 0 7px;text-align:justify;}
+
+#content .services {margin:0 0 20px;padding:0 0 20px;border-bottom:1px dotted #3e4245;}
+#content .services .image {width:300px;height:127px;
+    background:transparent url(img/index_services_image.png) no-repeat scroll top center;}
+#content .services .image img {margin:3px;}
+#content .services h3 {margin:7px 0;font-size:17px;font-weight:normal;}
+#content .services h3 a {text-decoration:none;}
+#content .services h3 a:hover {text-decoration:underline;}
+#content .services div {line-height:17px;font-size:12px;color:#3e4245;}
+
+#content .index-posts .post {margin:0 0 10px;padding:0 0 10px;}
+#content .index-posts .line {border-bottom:1px dotted #dcdfe6;}
+#content .index-posts .image {width:140px;height:78px;
+    background:transparent url(img/index_posts_image.png) no-repeat scroll top center;}
+#content .index-posts .image img {margin:3px;}
+#content .index-posts .image .date {display:block;float:right;margin:3px 0 0;padding:3px;
+    background:#dcdfe6;font-size:10px;color:#808080;}
+#content .index-posts h3 {margin:0 0 7px;font-size:16px;font-weight:normal;}
+#content .index-posts h3 a {text-decoration:none;}
+#content .index-posts h3 a:hover {text-decoration:underline;}
+#content .index-posts .content {line-height:15px;font-size:12px;color:#3e4245;}
+
+#content .index-works .big-thumb {width:300px;height:216px;
+    background:transparent url(img/index_works_image.png) no-repeat scroll top center;}
+#content .index-works .big-thumb img {margin:3px;}
+#content .index-works .thumbs .image {width:60px;height:60px;margin-bottom:18px;
+    background:transparent url(img/index_works_small_image.png) no-repeat scroll top center;}
+#content .index-works .thumbs .image img {margin:3px;}
+
+#content .portfolio .image {width:300px;height:216px;
+    background:transparent url(img/index_works_image.png) no-repeat scroll top center;}
+#content .portfolio .image img {margin:3px;}
+#content .portfolio h3 {margin:7px 0;font-size:17px;font-weight:normal;}
+#content .portfolio h3 a {text-decoration:none;}
+#content .portfolio h3 a:hover {text-decoration:underline;}
+#content .portfolio .portfolio-line {margin:20px 0 25px;border-bottom:1px dotted #dcdfe6;}
+#content .portfolio .noline {border:none;}
+#content .portfolio .content {line-height:15px;font-size:12px;color:#3e4245;}
+
+#content .portfolio .preview {width:620px;height:420px;
+    background:transparent url(img/gallery_big_image.png) no-repeat scroll top center;}
+#content .portfolio .preview img {margin:3px;}
+#content .portfolio .thumbs {margin:10px 0 20px;padding:10px 0;border-top:1px dotted #dcdfe6;}
+#content .portfolio h2 {margin:5px 0 15px;font-size:26px;font-weight:normal;color:#29abe2;}
+#content .portfolio .portfolio-content {line-height:15px;font-size:12px;color:#3e4245;}
+
+#content .posts .post {margin:0 0 15px;padding:0 0 15px;border-bottom:1px dotted #dcdfe6;}
+#content .posts .post h2.entry-link {margin:0 0 5px;font-size:20px;font-weight:normal;color:#29abe2;}
+#content .posts .post h2.entry-link a {text-decoration:none;}
+#content .posts .post h2.entry-link a:hover {text-decoration:underline;}
+#content .posts .post .image {margin-right:0;width:200px;height:170px;margin-right:15px;
+    background:transparent url(img/blog_post_image.png) no-repeat scroll top center;}
+#content .posts .post .image img {margin:3px;}
+#content .posts .post .entry-summary {line-height:16px;font-size:12px;color:#3e4245;}
+#content .posts .post .info {margin:7px 0;padding:3px 0;background:#efefef;color:#808080;font-size:11px;}
 
 #slider {margin:0 0 35px;}
 #slideContainer {width:940px;height:350px;margin:0 auto 0;
@@ -80,7 +137,7 @@ img {border:none;}
 #sidebar-shadow .shadow-top, #sidebar-shadow .shadow-bottom {margin-left:-20px;height:100px;}
 #sidebar-shadow .shadow-top {
     background:transparent url(img/bg_sidebar_top.png) no-repeat scroll top left;}
-#sidebar-shadow .shadow-bottom {margin-top:-60px;
+#sidebar-shadow .shadow-bottom {height:80px;margin-top:-60px;
     background:transparent url(img/bg_sidebar_bottom.png) no-repeat scroll bottom left;}
 
 .widgets li.widget-container {margin:0 0 20px;}

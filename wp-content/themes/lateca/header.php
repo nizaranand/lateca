@@ -18,6 +18,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
     $('#slides').cycle({fx:'fade',speed:1500,timeout:4000,prev:'#back',next:'#forward',pause:1,pager:'#paginator'});
+    $('#big_thumb').cycle({fx:'fade',speed:1500,timeout:4000,prev:'',next:'',pause:1,pager:''});
 });
 </script>
 </head>

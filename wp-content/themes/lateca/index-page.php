@@ -16,7 +16,7 @@ Template Name: Index template
                     $custom = get_post_custom($post->ID);
                     $thumbnail_id = $custom["_thumbnail_id"][0];
                     $thumbnail = wp_get_attachment_image_src($thumbnail_id);
-                    $image = str_replace('-150x150', '', $thumbnail[0]);
+                    $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
                 ?>
                 <li>
                     <a href="/<?php echo $post->post_name.'/'.$post->post_name; ?>">
@@ -29,25 +29,104 @@ Template Name: Index template
        <div id="paginator"></div> 
     </div>
     <div class="clear"></div>
-    <div class="content">
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        In odio lectus, vehicula in fermentum eget, ullamcorper ac nisi. 
-        Ut sodales magna quis lorem adipiscing at vulputate libero tincidunt. 
-        Suspendisse vitae mi sit amet risus tincidunt rhoncus. 
-        Pellentesque rhoncus, diam sit amet molestie semper, mauris magna sollicitudin lorem, 
-        in faucibus leo elit non lectus. Aenean fringilla dignissim orci. Etiam ut enim mi. 
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-        Nam cursus eleifend risus, id pharetra massa hendrerit id. 
-        In consectetur odio et enim pellentesque fringilla. Donec non sem eu nunc posuere venenatis. 
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-        Suspendisse potenti. Etiam dignissim condimentum iaculis. Nam et risus eget augue faucibus fringilla. 
-        Pellentesque ut felis arcu, non sagittis est. Donec bibendum lorem in nisl consectetur malesuada. 
-        Mauris convallis euismod nisi, eu dictum ipsum lacinia ac. 
-        Praesent pulvinar sodales purus quis consectetur.
-        <br/><br/><br/>
-    </p>
+    <h1>What services can we offer?</h1>
+    <div class="services">
+    <?php
+    $services = get_page_by_title('services');
+    $pages = get_children($services->ID);
+    $posts = array_reverse($pages);
+    $c = 0;
+    foreach ($posts AS $page):
+        $post = get_post($page->ID);
+        $custom = get_post_custom($post->ID);
+        $thumbnail_id = $custom["_thumbnail_id"][0];
+        $thumbnail = wp_get_attachment_image_src($thumbnail_id);
+        $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
+        $c++;
+        $class = '';
+        if ($c == 1) {
+            $class = 'alpha';
+        }
+        if ($c == count($pages)) {
+            $class = 'omega';
+        }
+    ?>
+    <div class="grid_4 <?php echo $class; ?>">
+        <div class="image">
+            <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image; ?>&w=294&h=121&zc=1" alt="" /></a>
+        </div>    
+        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <div>
+            <?php echo get_summary($post->post_content); ?>
+        </div>
     </div>
+    <?php endforeach; ?>
+    <div class="clear"></div>
+    </div>
+    <div class="grid_6 alpha index-posts">
+        <h1>Latest posts</h1>
+        <?php 
+        $c = 0;
+        $loop = new WP_Query(array('posts_per_page' => 2));
+        while ( $loop->have_posts() ) : $loop->the_post();	
+            $custom = get_post_custom($post->ID);
+            $thumbnail_id = $custom["_thumbnail_id"][0];
+            $thumbnail = wp_get_attachment_image_src($thumbnail_id);
+            $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
+            $c++;
+            $class = '';
+            if ($c == 1) {
+                $class = 'line';
+            }
+        ?>
+        <div class="post <?php echo $class; ?>">
+        <div class="grid_2 alpha image">
+            <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image; ?>&w=134&h=72&zc=1" alt="" /></a>
+            <span class="date"><?php the_time('l, F jS, Y'); ?></span>
+        </div>
+        <div class="grid_4 omega">
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <div class="content"><?php echo get_summary($post->post_content); ?></div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <?php endwhile; ?>
+    </div>
+    <div class="grid_6 omega index-works">
+        <h1>Latest works</h1>
+        <?php $loop = new WP_Query(array('post_type' => 'portfolio', 'posts_per_page' => 6)); ?>
+        <div class="grid_4 alpha big-thumb" id="big_thumb">
+        <?php
+        while ( $loop->have_posts() ) : $loop->the_post();
+            $custom = get_post_custom($post->ID);
+            $thumbnail_id = $custom["_thumbnail_id"][0];
+            $thumbnail = wp_get_attachment_image_src($thumbnail_id);
+            $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
+        ?>
+        <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image; ?>&w=294&h=210&zc=1" alt="" /></a>
+        <?php endwhile; ?>
+        </div>
+        <div class="grid_2 omega thumbs">
+        <?php
+        $c = 0;
+        while ( $loop->have_posts() ) : $loop->the_post();
+            $custom = get_post_custom($post->ID);
+            $thumbnail_id = $custom["_thumbnail_id"][0];
+            $thumbnail = wp_get_attachment_image_src($thumbnail_id);
+            $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
+            $class = 'omega';
+            $c++;
+            if ($c % 2) {
+                $class = 'alpha';
+            }
+        ?>
+        <div class="grid_1 image <?php echo $class; ?>">
+            <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image; ?>&w=54&h=54&zc=1" alt="" /></a>
+        </div>
+        <?php endwhile; ?>
+        </div>
+    </div>
+    <div class="clear"></div>
 </div>
-<div class="clear"></div>
+<div class="clear" style="height:30px;"></div>
 <?php get_footer(); ?>
