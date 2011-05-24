@@ -4,6 +4,14 @@ Template Name: Index template
 */
 ?>
 <?php get_header(); ?>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.6.1.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery.cycle.all.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#slides').cycle({fx:'fade',speed:1500,timeout:4000,prev:'#back',next:'#forward',pause:1,pager:'#paginator'});
+    $('#big_thumb').cycle({fx:'fade',speed:1500,timeout:4000,prev:'',next:'',pause:1,pager:''});
+});
+</script>
 <div class="grid_12 alpha" id="content">
     <div id="slider">
        <div class="backLink"><a href="#" title="Back" id="back">Back</a></div>
