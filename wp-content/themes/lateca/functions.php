@@ -40,10 +40,10 @@ if ( function_exists('register_sidebar') ) {
         'name' => __('Center Widget Area', 'lateca'),
         'id' => 'center-widget-area',
         'description' => __('The center widget area', 'lateca'),
-        'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
     ));
 
     // Area 5, located in the footer. Empty by default.
@@ -61,9 +61,10 @@ if ( function_exists('register_sidebar') ) {
 
 // Actions
 add_action('init', 'create_portfolio');
-add_action("admin_init", "add_portfolio");
+add_action('admin_init', 'add_portfolio');
 add_action('save_post', 'update_website_url');
-add_action("manage_posts_custom_column",  "portfolio_columns_display");
+add_action('manage_posts_custom_column', 'portfolio_columns_display');
+add_action('init', 'portfolio_type_init');
 
 function create_portfolio() {
     $portfolio_args = array(
@@ -71,10 +72,12 @@ function create_portfolio() {
         'singular_label' => __('Portfolio'),
         'public' => true,
         'show_ui' => true,
+        'show_in_menu' => true, 
         'capability_type' => 'post',
         'hierarchical' => false,
         'rewrite' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'comments', 'post-formats')
+        'supports' => array('title', 'editor', 'thumbnail', 'comments', 'post-formats'),
+        'taxonomies' => array('portfolio_type')
     );
     register_post_type('portfolio', $portfolio_args);
 }
@@ -106,6 +109,22 @@ function portfolio_columns_display($portfolio_columns){
             the_excerpt();
             break;				
     }
+}
+
+function portfolio_type_init() {
+    register_taxonomy(
+        'portfolio_type',
+        'portfolio',
+        array(
+            'hierarchical' => true,
+            'label' => __('Portfolio type'),
+            'sort' => true,
+            'args' => array('orderby' => 'term_order'),
+            'rewrite' => array('slug' => 'portfolio-type', 'hierarchical' => true),
+            'show_ui' => true,
+            'query_var' => true,
+        )
+    );
 }
 
 // Filters

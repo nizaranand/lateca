@@ -4,6 +4,7 @@ Template Name Posts: Portfolio-single
 */
 ?>
 <?php get_header(); ?>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.6.1.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
     $(".page-item-11").addClass("current_page_item");
@@ -30,6 +31,7 @@ $(document).ready(function(){
             <?php 
             $attachments = simple_fields_get_post_value($post->ID, array(1,1), false); 
             $c = count($attachments);
+            if ($c > 0) {
             $i = 0;
             foreach ($attachments AS $attachment) {
                 $image = wp_get_attachment_url($attachment);
@@ -47,15 +49,17 @@ $(document).ready(function(){
                 <img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image; ?>&w=54&h=54&zc=1" alt=""/>
                 </a>
             </div>
-            <?php } ?>
+            <?php }} ?>
             <div class="clear"></div>
         </div>
     </div>
     <div class="grid_4 omega portfolio-content">
         <h2><?php the_title(); ?></h2>
         <?php the_content(); ?>
+        <div class="additional-info">
         <div class="tags">
-            <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
+            <?php the_category(', ') ?>
+        </div>
         </div>
     </div>
     <div class="clear"></div>

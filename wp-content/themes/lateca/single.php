@@ -4,6 +4,7 @@ Template Name Posts: Single
 */
 ?>
 <?php get_header(); ?>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.6.1.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
     $(".page-item-13").addClass("current_page_item");

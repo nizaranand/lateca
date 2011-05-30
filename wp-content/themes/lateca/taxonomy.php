@@ -4,6 +4,12 @@ Template Name: Portfolio
 */
 ?>
 <?php get_header(); ?>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.6.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".page-item-11").addClass("current_page_item");
+});
+</script>
 <div class="grid_12 alpha" id="breadcrumbs">
 <?php if(function_exists('bcn_display')) bcn_display(); ?>
 </div>
@@ -14,7 +20,7 @@ Template Name: Portfolio
     <div class="grid_8 omega">
         <ul class="portfolio_types">
         <?php 
-        echo '<li class="current-cat"><a href="/portfolio">All works</a></li>';
+        echo '<li><a href="/portfolio">All works</a></li>';
         wp_list_categories( 
             array( 
                 'taxonomy' => 'portfolio_type', 
@@ -28,9 +34,12 @@ Template Name: Portfolio
     <div class="clear"></div>
     <div class="portfolio">
     <?php 
+    //global $wp_query; 
+    $taxonomy_obj = $wp_query->get_queried_object();
+    get_term($taxonomy_obj->term_taxonomy_id, $taxonomy_obj->taxonomy);
+
     $c = 0;
-    $loop = new WP_Query(array('post_type' => 'portfolio', 'posts_per_page' => 9));
-    while ( $loop->have_posts() ) : $loop->the_post();	
+    while ( have_posts() ) : the_post();	
         $custom = get_post_custom($post->ID);
         $thumbnail_id = $custom["_thumbnail_id"][0];
         $thumbnail = wp_get_attachment_image_src($thumbnail_id);
