@@ -7,9 +7,8 @@ Template Name: Index template
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.6.1.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.cycle.all.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-    $('#slides').cycle({fx:'fade',speed:1500,timeout:4000,prev:'#back',next:'#forward',pause:1,pager:'#paginator'});
-    $('#big_thumb').cycle({fx:'fade',speed:1500,timeout:4000,prev:'',next:'',pause:1,pager:''});
+jQuery(document).ready(function(){
+    jQuery('#slides').cycle({fx:'fade',speed:1500,timeout:4000,prev:'#back',next:'#forward',pause:1,pager:'#paginator'});
 });
 </script>
 <div class="grid_12 alpha" id="content">
@@ -28,7 +27,7 @@ $(document).ready(function(){
                 ?>
                 <li>
                     <a href="/<?php echo $post->post_name.'/'.$post->post_name; ?>">
-                        <img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image; ?>&w=934&h=325&zc=1" alt="" />
+                        <img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image; ?>&w=940&h=330&zc=1" alt="" />
                     </a>
                 </li>
                 <?php endwhile; ?>  
@@ -103,16 +102,17 @@ $(document).ready(function(){
     <div class="grid_6 omega index-works">
         <h1>Latest works</h1>
         <?php $loop = new WP_Query(array('post_type' => 'portfolio', 'posts_per_page' => 6)); ?>
-        <div class="grid_4 alpha big-thumb" id="big_thumb">
+        <div class="grid_4 alpha big-thumb">
         <?php
-        while ( $loop->have_posts() ) : $loop->the_post();
+        $c = 0;
+        if ($loop->have_posts() ) : $loop->the_post();
             $custom = get_post_custom($post->ID);
             $thumbnail_id = $custom["_thumbnail_id"][0];
             $thumbnail = wp_get_attachment_image_src($thumbnail_id);
             $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
         ?>
         <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/timthumb.php?src=<?php echo $image; ?>&w=294&h=210&zc=1" alt="" /></a>
-        <?php endwhile; ?>
+        <?php endif; ?>
         </div>
         <div class="grid_2 omega thumbs">
         <?php

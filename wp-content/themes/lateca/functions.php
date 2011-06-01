@@ -34,6 +34,17 @@ if ( function_exists('register_sidebar') ) {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ));
+    
+    // Area 6. Empty by default.
+    register_sidebar(array(
+        'name' => __('First custom Widget Area', 'lateca'),
+        'id' => 'first-custom-widget-area',
+        'description' => __('The custom widget area', 'lateca'),
+        'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 
     // Area 4, located in the center. Empty by default.
     register_sidebar(array(
@@ -56,6 +67,8 @@ if ( function_exists('register_sidebar') ) {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ));
+    
+    
 
 }
 
@@ -151,6 +164,7 @@ function get_summary($content, $block = 0) {
     }
     return $content;
 }
+
 
 
 ?>
