@@ -20,6 +20,7 @@ Template Name: Archive
         </li>
     <?php endwhile; ?> 
     </ul>
+    <?php wp_pagenavi(); ?>
 <?php else : ?>
 <h1>No posts found. Try a different search?</h1>
 <?php endif; ?>

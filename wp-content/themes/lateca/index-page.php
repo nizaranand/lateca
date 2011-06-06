@@ -18,8 +18,9 @@ jQuery(document).ready(function(){
        <div id="slideContainer">
            <ul id="slides"> 
                <?php 
-               $loop = new WP_Query(array('post_type' => 'portfolio', 'posts_per_page' => 5));
-               while ( $loop->have_posts() ) : $loop->the_post();	
+               //$loop = new WP_Query(array('meta_key' => 'showinslider', 'meta_value' => 1));
+               query_posts('post_type=portfolio&meta_key=showinslider&meta_value=1');
+               while (have_posts()) : the_post();
                     $custom = get_post_custom($post->ID);
                     $thumbnail_id = $custom["_thumbnail_id"][0];
                     $thumbnail = wp_get_attachment_image_src($thumbnail_id);

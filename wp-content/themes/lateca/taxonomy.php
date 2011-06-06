@@ -71,6 +71,7 @@ $(document).ready(function(){
         echo '<div class="clear"></div><div class="portfolio-line noline"></div>';
     }
     ?>
+        <?php wp_paginate(); ?>
     </div>
 </div>
 <div class="clear"></div>

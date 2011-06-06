@@ -132,6 +132,11 @@ img {border:none;}
 #content .portfolio_types li a:hover,
 #content .portfolio_types li.current-cat a {background:#29abe2;color:#fff;}
 
+.pagination {height:30px;margin-bottom:10px;}
+.pagination ol li a {background:#eee;color:#076288;}
+.pagination ol li a:hover {background:#e1e1e1;color:#3e4245;}
+.pagination span.current {background:#29abe2;color:#fff;}
+
 .contact-form p {margin:5px 0;}
 .contact-form input, .contact-form textarea {padding:6px;border:solid 1px #ccc;outline:0;width:200px;}
 .contact-form textarea {width:400px;max-width:350px;height:150px;line-height:150%;font-family:arial;}
@@ -194,6 +199,13 @@ img {border:none;}
 .widget_sub_page_navigation ul li.page_item a:hover, 
 .widget_sub_page_navigation ul li.current_page_item a, 
 .widget_my_categories ul li.current-cat a {color:#808080;}
+
+.widget_sub_page_navigation h3.widget-title {margin:0;}
+.widget_sub_page_navigation ul li {border-bottom:1px dotted #ddd;}
+.widget_sub_page_navigation ul li a {padding:10px 14px;text-decoration:none;font-weight:bold;
+    display:block;background:transparent url(img/arrow.png) no-repeat scroll center left;}
+.widget_sub_page_navigation ul li a:hover, 
+.widget_sub_page_navigation ul li.current-post a {color:#808080;}
 
 .widget_recent_entries ul li {border-bottom:1px dotted #ddd;}
 .widget_recent_entries ul li a {padding:10px 14px;text-decoration:none;font-style:italic;

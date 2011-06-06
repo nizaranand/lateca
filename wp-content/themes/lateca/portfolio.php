@@ -9,12 +9,17 @@ Template Name: Portfolio
 </div>
 <div class="grid_12 alpha" id="content">
     <div class="grid_4 alpha">
-        <h1 class="entry-title">Portfolio</h1>
+        <h1 class="entry-title"><?php echo __('Portfolio'); ?></h1>
     </div>
     <div class="grid_8 omega">
         <ul class="portfolio_types">
         <?php 
-        echo '<li class="current-cat"><a href="/portfolio">All works</a></li>';
+        switch (ICL_LANGUAGE_CODE) {
+            case 'lv': $alllink = '/lv/portfolio'; break;
+            case 'ru': $alllink = '/ru/portfolio'; break;
+            default: $alllink = '/portfolio';
+        }
+        echo '<li class="current-cat"><a href="'.$alllink.'">'.__('All works').'</a></li>';
         wp_list_categories( 
             array( 
                 'taxonomy' => 'portfolio_type', 
@@ -29,8 +34,15 @@ Template Name: Portfolio
     <div class="portfolio">
     <?php 
     $c = 0;
-    $loop = new WP_Query(array('post_type' => 'portfolio', 'posts_per_page' => 9));
-    while ( $loop->have_posts() ) : $loop->the_post();	
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $wp_query = new WP_Query( array(
+        'post_type' => 'portfolio',
+        'posts_per_page' => 9,
+        'post_status' => 'publish',
+        'orderby' => 'menu_order',
+        'paged' => $paged
+    ) );
+    while ( $wp_query->have_posts() ) : $wp_query->the_post();	
         $custom = get_post_custom($post->ID);
         $thumbnail_id = $custom["_thumbnail_id"][0];
         $thumbnail = wp_get_attachment_image_src($thumbnail_id);
@@ -58,10 +70,14 @@ Template Name: Portfolio
     <?php echo $clear; ?>
     <?php endwhile; ?>  
     <?php 
+    if ($c == 1) {
+        echo '<div class="clear"></div><div class="portfolio-line"></div>';
+    }
     if ( ! in_array($c, array(3,6,9,12,16))) {
         echo '<div class="clear"></div><div class="portfolio-line noline"></div>';
     }
     ?>
+    <?php wp_paginate(); ?>
     </div>
 </div>
 <div class="clear"></div>

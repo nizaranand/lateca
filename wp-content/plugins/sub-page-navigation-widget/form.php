@@ -15,10 +15,10 @@
 
 <p>
   <?php _e( 'Sort by:' ); ?>
-  <select name="<?php Echo $this->get_field_name('sortby'); ?>">
-    <option value="menu_order" <?php selected( $this->get_option('sortby'), 'menu_order' ); ?> ><?php _e('Page order'); ?></option>
-    <option value="post_title" <?php selected( $this->get_option('sortby'), 'post_title' ); ?> ><?php _e('Page title'); ?></option>
-    <option value="ID" <?php selected( $this->get_option('sortby'), 'ID' ); ?> ><?php _e( 'Page ID' ); ?></option>
+  <select name="<?php Echo $this->get_field_name('orderby'); ?>">
+    <option value="menu_order" <?php selected( $this->get_option('orderby'), 'menu_order' ); ?> ><?php _e('Page order'); ?></option>
+    <option value="title" <?php selected( $this->get_option('orderby'), 'title' ); ?> ><?php _e('Page title'); ?></option>
+    <option value="ID" <?php selected( $this->get_option('orderby'), 'ID' ); ?> ><?php _e( 'Page ID' ); ?></option>
   </select>
 </p>
 
@@ -34,6 +34,6 @@
 </p>
 
 <p>
-  <input type="checkbox" value="yes" name="<?php Echo $this->get_field_name('hide_upward_link') ?>"<?php checked( $this->get_option('hide_upward_link'), 'yes' ); ?>/>
+  <input type="checkbox" value="yes" name="<?php Echo $this->get_field_name('hide_parent_link') ?>"<?php checked( $this->get_option('hide_parent_link'), 'yes' ); ?>/>
   <?php Echo $this->t('Hide link to parant page.') ?>
 </p>

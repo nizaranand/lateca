@@ -3,18 +3,22 @@ Contributors: dhoppe
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1220480
 Tags: widget, sidebar, page, pages, cms, menu
 Requires at least: 2.8
-Tested up to: 3.1
+Tested up to: 3.2
 Stable tag: trunk
 
-This Widget shows a link to all sub pages of the current one on your sidebar.
+This Widget displays a navigation structure to all sub pages of the current one in your sidebar.
 
 == Description ==
 
-This Widget shows a link to all sub pages of the current one on your sidebar.
-You can add this widget to sidebars on pages to show all sub pages of the current one.
+This Widget displays a navigation structure to all sub pages of the current one in your sidebar. You can add this widget to sidebars on pages to show all sub pages of the current one.
 
-* The widget is available in English.
-* Das Widget ist in Deutsch verfügbar.
+= Handling =
+The handling is very easy. After activating the plug-in you will find a new widget in your admin panel. Add it to a sidebar and check all options you need. That's it.
+
+= Language =
+* This plug-in is available in English.
+* Dieses Plugin ist in Deutsch verfügbar. ([Dennis Hoppe](http://dennishoppe.de/))
+* Acest plugin este disponibil în limba Română. ([Anunturi Jibo](http://www.jibo.ro/))
  
 
 == Installation ==
@@ -27,6 +31,10 @@ Installation as usual.
 1. You like what you see?
 
 == Changelog ==
+
+= 1.1 =
+* Complete rewritten
+* Added Romanian translation by [Anunturi Jibo](http://www.jibo.ro/).
 
 = 1.0.4 =
 * Fixed a small bug (Widget did not show sub pages if were loaded before the page content).

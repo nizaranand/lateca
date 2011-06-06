@@ -75,9 +75,11 @@ if ( function_exists('register_sidebar') ) {
 // Actions
 add_action('init', 'create_portfolio');
 add_action('admin_init', 'add_portfolio');
-add_action('save_post', 'update_website_url');
+add_action('save_post', 'update_showinslider');
 add_action('manage_posts_custom_column', 'portfolio_columns_display');
 add_action('init', 'portfolio_type_init');
+
+add_rewrite_rule( 'portfolio/page/([0-9]+)/?$', 'index.php?pagename=portfolio&paged=$matches[1]', 'top' );
 
 function create_portfolio() {
     $portfolio_args = array(
@@ -88,7 +90,7 @@ function create_portfolio() {
         'show_in_menu' => true, 
         'capability_type' => 'post',
         'hierarchical' => false,
-        'rewrite' => true,
+        'rewrite' => array('slug' => 'portfolio'),
         'supports' => array('title', 'editor', 'thumbnail', 'comments', 'post-formats'),
         'taxonomies' => array('portfolio_type')
     );
@@ -102,18 +104,21 @@ function add_portfolio(){
 function portfolio_options(){
     global $post;
     $custom = get_post_custom($post->ID);
-    $website_url = $custom["website_url"][0];
+    $showinslider = $custom["showinslider"][0];
     ?>
     <div id="portfolio-options">
-            <label for="website_url">Website URL:</label><br/>
-            <input name="website_url" type="text" size="30" id="website_url" value="<?php echo $website_url; ?>" /> 
+        <input name="showinslider" type="checkbox" size="30" id="showinslider" value="1" <?php echo (($showinslider == 1) ? 'checked' : ''); ?> /> 
+        <label for="showinslider">Show in slider</label><br/>
     </div>
     <?php
 }
 
-function update_website_url(){
+function update_showinslider(){
     global $post;
-    update_post_meta($post->ID, "website_url", $_POST["website_url"]);
+    if (empty($_POST["showinslider"])) {
+        $_POST["showinslider"] = 0;
+    }
+    update_post_meta($post->ID, "showinslider", $_POST["showinslider"]);
 }
 
 function portfolio_columns_display($portfolio_columns){

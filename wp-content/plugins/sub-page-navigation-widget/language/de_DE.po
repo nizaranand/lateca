@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sub page navigation Widget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-27 07:56+0100\n"
+"POT-Creation-Date: 2011-06-06 18:50+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dennis Hoppe\n"
 "Language-Team: Dennis Hoppe\n"
@@ -14,18 +14,6 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-KeywordsList: t;t:2c,1\n"
 "X-Poedit-SearchPath-0: ..\n"
-
-#: ../widget-sub-page-navigation.php:30
-msgid "Sub Pages"
-msgstr "Unterseiten"
-
-#: ../widget-sub-page-navigation.php:31
-msgid "You can add this widget to sidebars on pages to show all sub pages of the current one."
-msgstr "Sie können dieses Wiget in Sidebars von Seiten einbinden um die Unterseite aufzulisten."
-
-#: ../widget-sub-page-navigation.php:54
-msgid "Navigation"
-msgstr "Navigation"
 
 #: ../form.php:2
 msgid "Title:"
@@ -46,4 +34,16 @@ msgstr "Zeige das Widget nicht auf Top Level Seiten wenn es keine Unterseiten gi
 #: ../form.php:38
 msgid "Hide link to parant page."
 msgstr "Link zur übergeordneten Seite verstecken."
+
+#: ../widget-sub-page-navigation.php:27
+msgid "Sub Pages"
+msgstr "Unterseiten"
+
+#: ../widget-sub-page-navigation.php:28
+msgid "You can add this widget to sidebars on pages to show all sub pages of the current one."
+msgstr "Sie können dieses Wiget in Sidebars von Seiten einbinden um die Unterseite aufzulisten."
+
+#: ../widget-sub-page-navigation.php:51
+msgid "Navigation"
+msgstr "Navigation"
 

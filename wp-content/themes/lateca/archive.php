@@ -34,13 +34,21 @@ Template Name: Archive
     
     <div class="content posts">
     <?php 
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     if (count($query) > 0) {
         $query['posts_per_page'] = 10;
-        $loop = new WP_Query($query);	
+        $query['paged'] = $paged;
+        $wp_query = new WP_Query($query);	
     } else {
-        $loop = new WP_Query(array('category_name' => 'blog', 'posts_per_page' => 10));	
+//        $wp_query = new WP_Query( array(
+//            'category_name' => 'blog',
+//            'posts_per_page' => 10,
+//            'post_status' => 'publish',
+//            'orderby' => 'menu_order',
+//            'paged' => $paged
+//        ) );
     }
-    while ( $loop->have_posts() ) : $loop->the_post();
+    while ( $wp_query->have_posts() ) : $wp_query->the_post();
         $custom = get_post_custom($post->ID);
         $thumbnail_id = $custom["_thumbnail_id"][0];
         $thumbnail = wp_get_attachment_image_src($thumbnail_id);
@@ -61,6 +69,7 @@ Template Name: Archive
     <div class="clear"></div>
     </div>
     <?php endwhile; // end of the loop. ?>
+    <?php wp_paginate(); ?>
     </div>
 </div>
 <div class="grid_3 omega" id="sidebar">
