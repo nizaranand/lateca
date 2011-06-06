@@ -9,7 +9,7 @@ Template Name: Page with carousel
 <script type="text/javascript">
 $(document).ready(function(){
     $('.client-list').jcarousel({
-        auto:4,wrap:'last',initCallback: mycarousel_initCallback
+        auto:5,wrap:'last',initCallback: mycarousel_initCallback
     });
 });
 function mycarousel_initCallback(carousel) {
@@ -50,6 +50,13 @@ function mycarousel_initCallback(carousel) {
                 <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/tikkurila.jpg" alt="" /></li>
                 <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/unitek.jpg" alt="" /></li>
                 <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/zepter.jpg" alt="" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/creative.jpg" alt="" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/gadalaiki.jpg" alt="" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/estel.jpg" alt="" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/kolonna.jpg" alt="" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/landrover.jpg" alt="" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/alessandro.jpg" alt="" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/img/clients/koala.jpg" alt="" /></li>
             </ul>
             <a href="#next" class="buttons" id="next">&nbsp;</a>
             <div class="clear"></div>

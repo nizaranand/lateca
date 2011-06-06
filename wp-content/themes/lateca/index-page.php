@@ -36,11 +36,20 @@ jQuery(document).ready(function(){
        <div id="paginator"></div> 
     </div>
     <div class="clear"></div>
-    <h1>What services can we offer?</h1>
     <div class="services">
+    <h1><?php echo __('What services can we offer?'); ?></h1>
     <?php
-    $services = get_page_by_title('services');
-    $pages = get_children($services->ID);
+    switch (ICL_LANGUAGE_CODE) {
+        case 'ru': $serviceid = 173; break;
+        case 'lv': $serviceid = 179; break;
+        default: $serviceid = 9; break;
+    }
+    $args = array(
+        'post_parent' => $serviceid,
+        'numberposts' => 3,
+        'post_type' => 'page',
+    );
+    $pages = get_children($args);
     $posts = array_reverse($pages);
     $c = 0;
     foreach ($posts AS $page):
@@ -71,7 +80,7 @@ jQuery(document).ready(function(){
     <div class="clear"></div>
     </div>
     <div class="grid_6 alpha index-posts">
-        <h1>Latest posts</h1>
+        <h1><?php echo __('Latest posts'); ?></h1>
         <?php 
         $c = 0;
         $loop = new WP_Query(array('posts_per_page' => 2));
@@ -100,7 +109,7 @@ jQuery(document).ready(function(){
         <?php endwhile; ?>
     </div>
     <div class="grid_6 omega index-works">
-        <h1>Latest works</h1>
+        <h1><?php echo __('Latest works'); ?></h1>
         <?php $loop = new WP_Query(array('post_type' => 'portfolio', 'posts_per_page' => 6)); ?>
         <div class="grid_4 alpha big-thumb">
         <?php

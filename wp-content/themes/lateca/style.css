@@ -38,7 +38,7 @@ img {border:none;}
 
 .index #header {height:110px;}
 .other #header {height:130px;}
-#header .logo img {margin-top:45px;}
+#header .logo img {margin-top:38px;}
 #header .navigation {clear:both;list-style:none;float:right;margin-top:60px;}
 #header .navigation li {float:left;margin:0 10px;}
 #header .navigation li a {display:block;font-size:16px;color:#fff;text-decoration:none;}
@@ -105,7 +105,7 @@ img {border:none;}
 #content .portfolio .thumbs .thumb  {width:60px;height:60px;
     background:transparent url(img/index_works_small_image.png) no-repeat scroll top center;}
 #content .portfolio .thumbs .thumb img {margin:3px;}
-#content .portfolio h2 {margin:5px 0 15px;font-size:26px;font-weight:normal;color:#29abe2;}
+#content .portfolio h2 {margin:5px 0 15px;font-size:26px;line-height:30px;font-weight:normal;color:#29abe2;}
 #content .portfolio .portfolio-content {line-height:15px;color:#3e4245;}
 #content .portfolio .portfolio-content .additional-info {margin:10px 0;padding:10px 0;border-top:1px dotted #dcdfe6;}
 
@@ -127,10 +127,10 @@ img {border:none;}
 
 #content .portfolio_types {margin-top:7px;float:right;list-style:none;}
 #content .portfolio_types li {float:left;margin:0 3px;}
-#content .portfolio_types li a {display:block;padding:5px 7px;color:#808080;font-size:14px;
+#content .portfolio_types li a {display:block;padding:5px 7px;font-size:14px;
     text-decoration:none;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
 #content .portfolio_types li a:hover,
-#content .portfolio_types li.current-cat a {background:#808080;color:#fff;}
+#content .portfolio_types li.current-cat a {background:#29abe2;color:#fff;}
 
 .contact-form p {margin:5px 0;}
 .contact-form input, .contact-form textarea {padding:6px;border:solid 1px #ccc;outline:0;width:200px;}
@@ -147,18 +147,18 @@ img {border:none;}
 .contact-form .submit {text-align:right;width:385px;}
 .contact-form .submit input {-webkit-border-radius: 5px;-moz-border-radius: 5px;}
 
-#slider {margin:0 0 35px;}
+#slider {margin:0 0 45px;width:940px;height:350px;}
 #slideContainer {width:940px;height:350px;margin:0 auto 0;
     background:transparent url(img/bg_slider.png) no-repeat scroll top center;}
 #slides {width:940px;height:326px;margin:0 auto;position:relative;z-index:-1;}
-#back {width:16px;height:24px;position:absolute;margin:150px 0 0 -30px;font-size:0px;
+#back {width:16px;height:26px;position:absolute;margin:150px 0 0 -30px;font-size:0px;
     background:transparent url(img/slider_arrow_left.png) no-repeat scroll top center;}
-#forward {width:16px;height:24px;position:absolute;margin:150px 0 0 955px;font-size:0px;
+#forward {width:16px;height:26px;position:absolute;margin:150px 0 0 955px;font-size:0px;
     background:transparent url(img/slider_arrow_right.png) no-repeat scroll top center;}
-#paginator {margin:-3px auto 0;width:110px;height:16px;text-align:center;}
-#paginator a {display:block;float:left;margin:0 3px;width:16px;height:16px;font-size:0px;
+#paginator {margin:-3px auto 0;width:100px;height:16px;text-align:center;}
+#paginator a {display:block;float:left;margin:0 3px;width:12px;height:12px;font-size:0px;
     background:transparent url(img/dots.png) no-repeat scroll 0 0;}
-#paginator a.activeSlide {background-position:-16px 0;}
+#paginator a.activeSlide {background-position:-12px 0;}
 
 #sidebar {}
 #sidebar .search {margin:0 0 20px;}

@@ -19,13 +19,13 @@
 <div class="wrapper">
 <div class="container_12 contentwrapper">
 <div class="grid_12 alpha" id="header">
-<div class="grid_3 alpha logo">
+<div class="grid_4 alpha logo">
 <h1><a href="<?php echo get_option('home'); ?>/">
 <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="<?php bloginfo('home'); ?>" />
 </a></h1>
 <p><?php bloginfo('description'); ?></p>
 </div>
-<div class="grid_9 omega">
+<div class="grid_8 omega">
 <?php do_action('icl_language_selector'); ?>
 <div class="navigation">
 <?php wp_list_pages('title_li='); ?>
