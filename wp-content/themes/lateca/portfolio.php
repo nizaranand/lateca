@@ -43,7 +43,11 @@ Template Name: Portfolio
         'paged' => $paged
     ) );
     while ( $wp_query->have_posts() ) : $wp_query->the_post();	
-        $custom = get_post_custom($post->ID);
+    
+        $o_ID = icl_object_id($post->ID, 'portfolio', false, 'en');
+        $custom = get_post_custom($o_ID);
+        
+        //$custom = get_post_custom($post->ID);
         $thumbnail_id = $custom["_thumbnail_id"][0];
         $thumbnail = wp_get_attachment_image_src($thumbnail_id);
         $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);

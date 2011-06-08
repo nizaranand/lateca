@@ -119,6 +119,7 @@ function update_showinslider(){
         $_POST["showinslider"] = 0;
     }
     update_post_meta($post->ID, "showinslider", $_POST["showinslider"]);
+    update_post_meta($post->ID, "custom_post_template", "portfolio-single.php");
 }
 
 function portfolio_columns_display($portfolio_columns){

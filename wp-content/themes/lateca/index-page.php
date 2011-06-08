@@ -21,7 +21,11 @@ jQuery(document).ready(function(){
                //$loop = new WP_Query(array('meta_key' => 'showinslider', 'meta_value' => 1));
                query_posts('post_type=portfolio&meta_key=showinslider&meta_value=1');
                while (have_posts()) : the_post();
-                    $custom = get_post_custom($post->ID);
+                    
+                    $o_ID = icl_object_id($post->ID, 'portfolio', false, 'en');
+                    $custom = get_post_custom($o_ID);
+                
+                    //$custom = get_post_custom($post->ID);
                     $thumbnail_id = $custom["_thumbnail_id"][0];
                     $thumbnail = wp_get_attachment_image_src($thumbnail_id);
                     $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
@@ -116,7 +120,11 @@ jQuery(document).ready(function(){
         <?php
         $c = 0;
         if ($loop->have_posts() ) : $loop->the_post();
-            $custom = get_post_custom($post->ID);
+            
+            $o_ID = icl_object_id($post->ID, 'portfolio', false, 'en');
+            $custom = get_post_custom($o_ID);
+            
+            //$custom = get_post_custom($post->ID);
             $thumbnail_id = $custom["_thumbnail_id"][0];
             $thumbnail = wp_get_attachment_image_src($thumbnail_id);
             $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
@@ -128,7 +136,11 @@ jQuery(document).ready(function(){
         <?php
         $c = 0;
         while ( $loop->have_posts() ) : $loop->the_post();
-            $custom = get_post_custom($post->ID);
+            
+            $o_ID = icl_object_id($post->ID, 'portfolio', false, 'en');
+            $custom = get_post_custom($o_ID);
+        
+            //$custom = get_post_custom($post->ID);
             $thumbnail_id = $custom["_thumbnail_id"][0];
             $thumbnail = wp_get_attachment_image_src($thumbnail_id);
             $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);

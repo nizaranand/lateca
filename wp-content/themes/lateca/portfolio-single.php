@@ -18,7 +18,11 @@ $(document).ready(function(){
     <div class="portfolio">
     <?php 
     if (have_posts()) : while (have_posts()) : the_post(); 
-        $custom = get_post_custom($post->ID);
+    
+        $o_ID = icl_object_id($post->ID, 'portfolio', false, 'en');
+        $custom = get_post_custom($o_ID);
+    
+        //$custom = get_post_custom($post->ID);
         $thumbnail_id = $custom["_thumbnail_id"][0];
         $thumbnail = wp_get_attachment_image_src($thumbnail_id);
         $image = preg_replace('/\-([0-9]+)x([0-9]+)/', '', $thumbnail[0]);
@@ -29,7 +33,7 @@ $(document).ready(function(){
         </div>
         <div class="thumbs">
             <?php 
-            $attachments = simple_fields_get_post_value($post->ID, array(1,1), false); 
+            $attachments = simple_fields_get_post_value($o_ID, array(1,1), false); 
             $c = count($attachments);
             if ($c > 0) {
             $i = 0;
